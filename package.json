@@ -149,5 +149,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "@typescript-eslint/typescript-estree": "^4.28.3"
   }
 }
