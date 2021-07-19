@@ -1,12 +1,11 @@
-import * as React from 'react';
-
+import React, { FC, useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import BluetoothController from 'react-native-bluetooth-controller';
 
-export default function App() {
+const App: FC = () => {
   const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
+  useEffect(() => {
     BluetoothController.multiply(3, 7).then(setResult);
   }, []);
 
@@ -15,7 +14,9 @@ export default function App() {
       <Text>Result: {result}</Text>
     </View>
   );
-}
+};
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
