@@ -1,9 +1,7 @@
 import { NativeModules } from 'react-native';
-
-type BluetoothControllerType = {
-  multiply(a: number, b: number): Promise<number>;
-};
+import type { BluetoothControllerType } from './@types';
 
 const { BluetoothController } = NativeModules;
 
 export default BluetoothController as BluetoothControllerType;
+export * from './@types';
